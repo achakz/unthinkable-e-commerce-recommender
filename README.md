@@ -1,51 +1,56 @@
-AI-Powered E-commerce Product Recommender
+# 🛍️ AI-Powered E-commerce Product Recommender
 
-This is a full-stack web application that demonstrates a modern e-commerce recommendation system. It uses a simple logic-based recommender combined with a powerful Large Language Model (LLM) to provide users with personalized product suggestions and clear, human-readable explanations for why each product was recommended.
+This is a **full-stack web application** that demonstrates a modern e-commerce recommendation system. It combines a **logic-based recommender** with a **Large Language Model (LLM)** to provide users with personalized product suggestions and human-readable explanations for why each product was recommended.
 
-Features
+---
 
-Interactive Product Catalog: Users can browse a catalog of products.
+## 🚀 Features
 
-User History Tracking: Clicking "View Product" adds an item to the user's browsing history.
+* **Interactive Product Catalog:** Users can browse a catalog of products.
+* **User History Tracking:** Clicking *"View Product"* adds an item to the user's browsing history.
+* **Personalized Recommendations:** Generates product recommendations based on the user's viewing history.
+* **LLM-Powered Explanations:** For each recommendation, users can click *"Why Recommended?"* to get a unique, AI-generated explanation detailing the connection between their history and the suggested product.
+* **Responsive Design:** Built with **React** and **Tailwind CSS** for a modern, mobile-friendly experience.
+* **Decoupled Architecture:** A RESTful API backend (**Node.js/Express**) serves data and handles business logic, while a separate frontend (**React/Vite**) manages the UI.
 
-Personalized Recommendations: Generates product recommendations based on the user's viewing history.
+---
 
-LLM-Powered Explanations: For each recommendation, users can click "Why Recommended?" to get a unique, AI-generated explanation detailing the connection between their history and the suggested product.
+## 🧠 Tech Stack
 
-Responsive Design: A clean, modern, and responsive interface built with React and Tailwind CSS.
+| Layer        | Technology                |
+| ------------ | ------------------------- |
+| **Frontend** | React, Vite, Tailwind CSS |
+| **Backend**  | Node.js, Express.js       |
+| **AI Model** | Google Gemini API         |
+| **Database** | In-memory JSON (for MVP)  |
 
-Decoupled Architecture: A RESTful API backend (Node.js/Express) serves data and handles business logic, while a separate frontend (React/Vite) handles the user interface.
+---
 
-Tech Stack
-
-Frontend: React, Vite, Tailwind CSS
-
-Backend: Node.js, Express.js
-
-AI Model: Google Gemini API for generating explanations.
-
-Database: In-memory JSON (for this MVP)
-
-Setup and Installation
+## ⚙️ Setup and Installation
 
 Follow these steps to get the project running locally.
 
-Prerequisites
+### 🧩 Prerequisites
 
-Node.js and npm (or yarn/pnpm)
+* [Node.js](https://nodejs.org/) and npm (or yarn/pnpm)
+* A **Google Gemini API Key** from [Google AI Studio](https://aistudio.google.com/)
 
-A Google Gemini API Key. You can get one from Google AI Studio.
+---
 
-1. Clone the Repository
+### 1️⃣ Clone the Repository
 
-git clone <your-repository-url>
-cd ai-recommender
+```bash
+git clone https://github.com/achakz/unthinkable-e-commerce-recommender
+cd unthinkable-e-commerce-recommender
+```
 
+---
 
-2. Backend Setup
+### 2️⃣ Backend Setup
 
 Navigate to the backend directory and set up the server.
 
+```bash
 # Go to the backend folder
 cd backend
 
@@ -54,40 +59,66 @@ npm install
 
 # Create a .env file for your API key
 touch .env
+```
 
+Open the `.env` file and add your Gemini API key:
 
-Open the .env file and add your Gemini API key:
-
+```env
 GEMINI_API_KEY=your_google_api_key_here
+```
 
+---
 
-3. Frontend Setup
+### 3️⃣ Frontend Setup
 
 In a separate terminal, navigate to the frontend directory.
 
+```bash
 # Go to the frontend folder (from the root directory)
 cd frontend
 
 # Install dependencies
 npm install
+```
 
+---
 
-Running the Application
+## ▶️ Running the Application
 
 You need to run both the backend and frontend servers simultaneously in two separate terminals.
 
-Terminal 1: Start the Backend Server
+### 🖥️ Terminal 1: Start the Backend Server
 
+```bash
 # From the 'backend' directory
 node server.js
+```
 
+The server will be running at **[http://localhost:5001](http://localhost:5001)**.
 
-The server will be running on http://localhost:5001.
+---
 
-Terminal 2: Start the Frontend App
+### 🌐 Terminal 2: Start the Frontend App
 
+```bash
 # From the 'frontend' directory
 npm run dev
+```
 
+The React application will open in your browser, usually at **[http://localhost:5173](http://localhost:5173)**.
 
-The React application will open in your browser, usually at http://localhost:5173.
+---
+
+## 💡 Future Enhancements
+
+* Replace in-memory storage with a real database (MongoDB/PostgreSQL)
+* Add authentication and user profiles
+* Implement collaborative filtering for smarter recommendations
+* Containerize with Docker and add CI/CD support
+
+---
+
+## 🧑‍💻 Author
+
+**Anirban Chakrabortty**
+🌐 [LinkedIn](https://www.linkedin.com/in/anirban-chakrabortty-785999277/) • [GitHub](https://github.com/achakz)
